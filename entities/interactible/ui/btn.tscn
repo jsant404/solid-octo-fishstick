@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://65micfpou8r0"]
+
+[ext_resource type="Texture2D" uid="uid://dgtpl1u5h36i3" path="res://assets/imports/32x32mui/Modern_UI_Style_2_32x32.png" id="1_tthja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk0lo"]
+atlas = ExtResource("1_tthja")
+region = Rect2(920, 2, 48, 28)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = SubResource("AtlasTexture_gk0lo")
