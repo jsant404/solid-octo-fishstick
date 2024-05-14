@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var ATK_DMG = 100
 @export var COOLDOWN = 10
 @export var ACCEL = 20
+var prev_action = 0
 var action = "idle"
 
 @onready var anim_sprite = $AnimatedSprite2D
@@ -28,8 +29,13 @@ func _physics_process(delta):
 		#velocity.y = move_toward(velocity.y, SPEED * direction.y, 1)
 		velocity = direction * SPEED
 	if velocity.x > 0:
+		if prev_action < 0:
+			anim_sprite.play("transition")
+			
+			
 		if action ==  "idle":
 			anim_sprite.play("run")
+			prev_action = velocity.x
 		anim_sprite.flip_h = false
 	elif velocity.x < 0:
 		if action ==  "idle":
@@ -42,4 +48,3 @@ func _physics_process(delta):
 		anim_sprite.play("idle")
 	
 	move_and_slide()
- 

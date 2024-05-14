@@ -1,13 +1,14 @@
-[gd_scene load_steps=75 format=3 uid="uid://ixdquq5knamu"]
+[gd_scene load_steps=76 format=3 uid="uid://ixdquq5knamu"]
 
-[ext_resource type="Texture2D" uid="uid://dhbif6jv40k7n" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Attack.png" id="2_efgiv"]
-[ext_resource type="Texture2D" uid="uid://daothbb3ostkb" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Attack2.png" id="3_d2rak"]
-[ext_resource type="Texture2D" uid="uid://cxk4q4ywexqwc" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Idle.png" id="4_83n8p"]
-[ext_resource type="Texture2D" uid="uid://7srqph7xwhge" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_AttackComboNoMovement.png" id="4_n4mey"]
-[ext_resource type="Texture2D" uid="uid://b8nn3y3a7scjs" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Roll.png" id="5_8bahk"]
-[ext_resource type="Texture2D" uid="uid://dk46l0f52a3ik" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Run.png" id="6_jb4m6"]
-[ext_resource type="Texture2D" uid="uid://b3e4dwtkqfd2y" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_SlideAll.png" id="8_3ns25"]
-[ext_resource type="Texture2D" uid="uid://gilxtwrvgex0" path="res://assets/imports/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_TurnAround.png" id="9_l7ocs"]
+[ext_resource type="Script" path="res://entities/player/player.gd" id="1_dpov7"]
+[ext_resource type="Texture2D" uid="uid://b5a64t7ji5fla" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Attack.png" id="2_efgiv"]
+[ext_resource type="Texture2D" uid="uid://dhyu33ligmnse" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Attack2.png" id="3_d2rak"]
+[ext_resource type="Texture2D" uid="uid://drttnoue8cne4" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Idle.png" id="4_83n8p"]
+[ext_resource type="Texture2D" uid="uid://bd5mtsiihtyfa" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_AttackComboNoMovement.png" id="4_n4mey"]
+[ext_resource type="Texture2D" uid="uid://dccmwft3frvxg" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Roll.png" id="5_8bahk"]
+[ext_resource type="Texture2D" uid="uid://dip61wb7fnovo" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_Run.png" id="6_jb4m6"]
+[ext_resource type="Texture2D" uid="uid://c24ncwahp1jdi" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_SlideAll.png" id="8_3ns25"]
+[ext_resource type="Texture2D" uid="uid://cdnmb87fnxba3" path="res://assets/imports/Mobs/FreeKnight_v1/Colour2/NoOutline/120x80_PNGSheets/_TurnAround.png" id="9_l7ocs"]
 [ext_resource type="Script" path="res://entities/player/Attack.gd" id="9_t137t"]
 [ext_resource type="Script" path="res://entities/player/Roll.gd" id="9_xxvwn"]
 
@@ -481,6 +482,7 @@ size = Vector2(58.795, 7.95179)
 size = Vector2(41.3253, 33.1325)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dpov7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
@@ -497,6 +499,7 @@ offset = Vector2(5, 0)
 flip_h = true
 
 [node name="CollisionBody" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -29)
 shape = SubResource("CapsuleShape2D_l2ubv")
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=37 format=3 uid="uid://msvgddcgh670"]
 
 [ext_resource type="Script" path="res://entities/enemies/slime/slime.gd" id="1_173hr"]
-[ext_resource type="Texture2D" uid="uid://bq1h8760di6ln" path="res://assets/imports/Slime/slime-Sheet.png" id="2_tnuo7"]
+[ext_resource type="Texture2D" uid="uid://bqe4k1tnvwqxi" path="res://assets/imports/Mobs/Slime/slime-Sheet.png" id="2_tnuo7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w73gb"]
-radius = 40.0
-height = 130.0
+radius = 21.0
+height = 98.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mn5h4"]
 atlas = ExtResource("2_tnuo7")
@@ -257,13 +257,14 @@ wall_min_slide_angle = 0.0
 script = ExtResource("1_173hr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -32)
+visible = false
+position = Vector2(0, -21)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_w73gb")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -47)
-scale = Vector2(4, 4)
+position = Vector2(-4, -30.5)
+scale = Vector2(2.68, 2.68)
 sprite_frames = SubResource("SpriteFrames_bmsie")
 animation = &"attack"
 frame_progress = 0.329774
