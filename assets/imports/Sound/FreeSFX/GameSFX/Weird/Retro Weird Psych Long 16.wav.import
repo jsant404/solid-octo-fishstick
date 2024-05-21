@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://doi2mt6p3tfv4"
+path="res://.godot/imported/Retro Weird Psych Long 16.wav-3794db5412fb6aff9806868fca32fae8.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/FreeSFX/GameSFX/Weird/Retro Weird Psych Long 16.wav"
+dest_files=["res://.godot/imported/Retro Weird Psych Long 16.wav-3794db5412fb6aff9806868fca32fae8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

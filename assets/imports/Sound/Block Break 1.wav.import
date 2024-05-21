@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qjc6moav467j"
+path="res://.godot/imported/Block Break 1.wav-a24c24822b3be5db17c9c975c2a3d882.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/Block Break 1.wav"
+dest_files=["res://.godot/imported/Block Break 1.wav-a24c24822b3be5db17c9c975c2a3d882.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

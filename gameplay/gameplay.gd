@@ -5,7 +5,7 @@ extends Node2D
 	
 @export var noise_height_text: NoiseTexture2D
 @onready var tile_map = $TileMap
-@onready var nav_region = $NavigationRegion2D
+
 var noise : Noise
 var width : int = 960
 var height : int = 540
@@ -46,8 +46,8 @@ func _ready():
 	
 func generate_world():
 	
-	for x in range(width):
-		for y in range(height): #4.6
+	for x in range(noise_height_text.width):
+		for y in range(noise_height_text.height): #4.6
 			var noise_val = noise.get_noise_2d(x, y)
 			if noise_val > 0.95:
 				tile_map.set_cell(0,Vector2(x,y), source_iso_ground, ground_20)

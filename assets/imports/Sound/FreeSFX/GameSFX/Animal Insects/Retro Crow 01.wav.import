@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6uj2jwckub8x"
+path="res://.godot/imported/Retro Crow 01.wav-6021f0e2916304f5f595b1e9fc05db74.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/FreeSFX/GameSFX/Animal Insects/Retro Crow 01.wav"
+dest_files=["res://.godot/imported/Retro Crow 01.wav-6021f0e2916304f5f595b1e9fc05db74.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://148m6pma5i67"
+path="res://.godot/imported/Retro Instrument - crystal - C08.wav-173a960dbe6fded78b4281ec84f9f6c2.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/FreeSFX/Instruments/Retro Instrument - crystal - C08.wav"
+dest_files=["res://.godot/imported/Retro Instrument - crystal - C08.wav-173a960dbe6fded78b4281ec84f9f6c2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

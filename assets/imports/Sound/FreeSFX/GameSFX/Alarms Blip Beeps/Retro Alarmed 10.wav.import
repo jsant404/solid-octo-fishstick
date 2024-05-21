@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d017tvbiyq7cd"
+path="res://.godot/imported/Retro Alarmed 10.wav-54b5e01b32b5958d04b07504b586b766.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Alarmed 10.wav"
+dest_files=["res://.godot/imported/Retro Alarmed 10.wav-54b5e01b32b5958d04b07504b586b766.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://msvgddcgh670"]
+[gd_scene load_steps=38 format=3 uid="uid://msvgddcgh670"]
 
 [ext_resource type="Script" path="res://entities/enemies/slime/slime.gd" id="1_173hr"]
 [ext_resource type="Texture2D" uid="uid://bqe4k1tnvwqxi" path="res://assets/imports/Mobs/Slime/slime-Sheet.png" id="2_tnuo7"]
@@ -186,9 +186,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlhys")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -215,7 +215,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u188f")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -246,18 +246,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"move",
-"speed": 8.0
+"speed": 6.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_p31a6"]
+radius = 171.003
+
 [node name="Slime" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 4
+collision_mask = 2
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_173hr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -21)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_w73gb")
@@ -267,14 +269,21 @@ position = Vector2(-4, -30.5)
 scale = Vector2(2.68, 2.68)
 sprite_frames = SubResource("SpriteFrames_bmsie")
 animation = &"attack"
-frame_progress = 0.329774
+autoplay = "move"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 navigation_layers = 3
 debug_enabled = true
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_p31a6")
 
 [connection signal="child_entered_tree" from="CollisionShape2D2" to="." method="_on_collision_shape_2d_2_child_entered_tree"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

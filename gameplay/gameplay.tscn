@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bdnyglk1i1cxl"]
+[gd_scene load_steps=22 format=3 uid="uid://bdnyglk1i1cxl"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_thqv1"]
 [ext_resource type="Texture2D" uid="uid://c2tttxt0j545i" path="res://assets/imports/Buildings/Infernus_Tiles/Infernus_GorePile_1.png" id="3_rvx3n"]
@@ -7,8 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bxlids6iy21sx" path="res://assets/imports/Tilesets and props/Tilesets and props Demo.png" id="4_sqsur"]
 [ext_resource type="Texture2D" uid="uid://d3ja66glpc3p8" path="res://assets/imports/Floor/isometric tileset/spritesheet.png" id="5_qkcdt"]
 [ext_resource type="Texture2D" uid="uid://comy0n3j3klr2" path="res://assets/imports/Floor/isometric_jumpstart_v230311/iso_tile_export.png" id="5_ykhv8"]
-[ext_resource type="PackedScene" uid="uid://ixdquq5knamu" path="res://entities/player/player.tscn" id="6_tet3q"]
-[ext_resource type="PackedScene" uid="uid://bdve101vs0ww0" path="res://entities/interactible/pillar/pillar.tscn" id="9_ecbm1"]
+[ext_resource type="PackedScene" uid="uid://b0thwbd7tmitl" path="res://entities/player/mage/Mage.tscn" id="9_pfrv2"]
 [ext_resource type="PackedScene" uid="uid://msvgddcgh670" path="res://entities/enemies/slime/slime.tscn" id="10_slsmx"]
 
 [sub_resource type="Gradient" id="Gradient_xln6f"]
@@ -23,8 +22,9 @@ frequency = 0.0551
 metadata/_preview_in_3d_space_ = true
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8y332"]
-width = 1920
-height = 1080
+width = 1000
+height = 1000
+invert = true
 bump_strength = 6.2
 color_ramp = SubResource("Gradient_xln6f")
 noise = SubResource("FastNoiseLite_te8nx")
@@ -1061,12 +1061,6 @@ layer_0/z_index = -1
 
 [node name="SelectSfx" parent="." instance=ExtResource("4_7kf0b")]
 
-[node name="player" parent="." instance=ExtResource("6_tet3q")]
-top_level = true
-position = Vector2(1048, 595)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-
 [node name="Paused" parent="." instance=ExtResource("3_w8wrl")]
 visible = false
 layout_direction = 1
@@ -1081,8 +1075,11 @@ offset_right = 0.359985
 offset_bottom = -0.240051
 
 [node name="Slime" parent="." node_paths=PackedStringArray("player") instance=ExtResource("10_slsmx")]
-position = Vector2(1781, 1006)
-player = NodePath("../player")
+position = Vector2(169, 455)
+player = NodePath("../Mage")
 
-[node name="Pillar" parent="." instance=ExtResource("9_ecbm1")]
-position = Vector2(455, 446)
+[node name="Mage" parent="." instance=ExtResource("9_pfrv2")]
+position = Vector2(577, 551)
+
+[node name="Camera2D" type="Camera2D" parent="Mage"]
+position = Vector2(7, 2)

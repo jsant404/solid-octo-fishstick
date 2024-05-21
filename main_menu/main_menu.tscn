@@ -20,13 +20,15 @@ follow_viewport_enabled = true
 script = ExtResource("1_sb1wp")
 
 [node name="BG" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -1082.0
-offset_right = 1920.0
-offset_bottom = -3.0
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 1.463
+anchor_right = 0.035
+anchor_bottom = 1.463
+offset_left = -0.1
+offset_top = -1019.12
+offset_right = 1917.9
+offset_bottom = 59.88
 grow_vertical = 0
 color = Color(0.227451, 0.368627, 0.521569, 1)
 

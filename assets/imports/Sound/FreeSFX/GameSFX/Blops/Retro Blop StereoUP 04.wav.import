@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ukrb16gl8rje"
+path="res://.godot/imported/Retro Blop StereoUP 04.wav-992c2addc43670c57a570f86c36c087e.sample"
+
+[deps]
+
+source_file="res://assets/imports/Sound/FreeSFX/GameSFX/Blops/Retro Blop StereoUP 04.wav"
+dest_files=["res://.godot/imported/Retro Blop StereoUP 04.wav-992c2addc43670c57a570f86c36c087e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
